@@ -15,8 +15,8 @@
     <img :src="product.image" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{product.title}}</h5>
-      <p class="card-text">{{product.title}}</p>
-      <p class="card-text"><small class="text-muted">{{product.title}}</small></p>
+      <p class="card-text">R{{product.price}}</p>
+      <p class="card-text"><small class="text-muted">{{product.description}}</small></p>
     </div>
   </div>
 <!-- </section> -->

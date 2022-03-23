@@ -1,13 +1,14 @@
 <template >
     <div class="container">
-        <section class="products">
-  <div class="product-card  row row-cols-4 row-cols-lg-1 row-cols-md-4" v-for='product of products' :key="product.id" >
-    <div class="product-image">
-      <img :src="product.image" alt="" /></div>
-    <div class="product-info">
-      <h5>{{product.title}}</h5>
-      <h6>R{{product.price}}</h6>
-      <p>{{product.description}}</p>
+  <div class="row" >
+  <div class="card col-sm-12 col-md-4 col-lg-3" v-for='product of products' :key="product.id">
+    <img :src="product.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">R{{product.price}}</p>
+      <p class="card-text"><small class="text-muted">{{product.description}}</small></p>
+    </div>
+ 
       <!-- Button trigger modal -->
 <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" v-on:click="Update">
   EDIT
@@ -33,15 +34,15 @@
 <button type="button" class="btn btn-outline-danger" v-on:click="Delete">DELETE</button>
     </div>
   </div>
-</section>
+    </div>
 
-  <div class="row row-cols-4 row-cols-lg-1 row-cols-md-4" v-for='user of users' :key="user.id" >
+  <!-- <div class="row row-cols-4 row-cols-lg-1 row-cols-md-4" v-for='user of users' :key="user.id" >
  <button type="button" class="btn btn-outline-success">Edit</button>
     <button type="button" class="btn btn-outline-danger">Delete Product</button>
     
-  </div>
+  </div> -->
   
-</div>
+
     
 
 </template>
