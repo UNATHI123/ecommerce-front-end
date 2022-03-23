@@ -96,9 +96,9 @@
 export default {
   data(){
     return {
-      username:"",
-	   email:"",
-       password:"",
+      username:null,
+	   email:null,
+       password:null,
     };
   },
   methods: {

@@ -21,10 +21,16 @@
           <router-link to="/register" class="nav-link">Register</router-link> 
         </li>
          <li class="nav-item">
-          <router-link to="/cart" class="nav-link">Cart</router-link> 
+          <router-link to="/profile" class="nav-link">Profile</router-link> 
+        </li>
+        <li class="nav-item">
+          <router-link to="/contact" class="nav-link">Contact Us</router-link> 
         </li>
          <li class="nav-item">
-          <router-link to="/profile" class="nav-link">Profile</router-link> 
+          <router-link to="/cart" class="nav-link">Cart</router-link> 
+        </li>
+          <li class="nav-item">
+          <router-link to="/admin" class="nav-link">Admin</router-link> 
         </li>
       </ul>
     </div>

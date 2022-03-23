@@ -1,17 +1,25 @@
 <template >
 <div class="container-fluid">
-<h1></h1>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4"  v-for='product of products' :key="product.id">
-  <div class='product--red'>
-    <div class='product_inner'>
-      <img :src="product.image" width='300'>
-      <p>{{product.title}}</p>
+<!-- <section class="products">
+  <div class="product-card  row row-cols-4 row-cols-lg-1 row-cols-md-4" v-for='product of products' :key="product.id" >
+    <div class="product-image">
+      <img :src="product.image" alt="" /></div>
+    <div class="product-info">
+      <h5>{{product.title}}</h5>
+      <h6>R{{product.price}}</h6>
       <p>{{product.description}}</p>
-      <p>R{{product.price}}</p>
-      <button><i class="bi bi-cart"></i>Add to Cart</button>
     </div>
-</div>
-
+  </div> -->
+  <div class="row" >
+  <div class="card col-sm-12 col-md-4 col-lg-3" v-for='product of products' :key="product.id">
+    <img :src="product.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.title}}</p>
+      <p class="card-text"><small class="text-muted">{{product.title}}</small></p>
+    </div>
+  </div>
+<!-- </section> -->
 </div>
 </div>
 </template>
@@ -58,98 +66,50 @@ export default {
   flex-flow: row wrap;
 } */
 
-.product, .product--pink, .product--yellow, .product--green, .product--red, .product--orange, .product--blue {
-  box-shadow: 1px 5px 15px #CCC;
-  width: 18em;
-  height: auto;
-  border-radius: 3px;
-  padding: 2em;
-  margin: 1em;
-  overflow: hidden;
-  position: relative;
-  flex: auto;
-  color: #000;
+/* 
+.products {
+  display: flex;
+  flex-wrap: wrap;
 }
-.product--blue {
-  background: linear-gradient(-45deg, #92DCE5 50%, rgba(255, 255, 255, 0.5) 50%);
+
+.product-card {
+  padding: 2%;
+  flex: 1 100%;
+  // shorthand of flex-grow + flex-basis
 }
-.product--orange {
-  background: linear-gradient(-45deg, #EF6F6C 50%, rgba(255, 255, 255, 0.5) 50%);
+@media screen and (min-width: 600px) {
+  .product-card {
+    flex: 1 50%;
+  }
 }
-.product--red {
-  background: linear-gradient(-45deg, #E84855 50%, rgba(255, 255, 255, 0.5) 50%);
+@media screen and (min-width: 800px) {
+  .product-card {
+    flex: 1 25%;
+  }
 }
-.product--green {
-  background: linear-gradient(-45deg, #70C1B3 50%, rgba(255, 255, 255, 0.5) 50%);
+@media screen and (min-width: 1080px) {
+  .product-card {
+    flex: 1 20%;
+  }
 }
-.product--yellow {
-  background: linear-gradient(-45deg, #E8DB7D 50%, rgba(255, 255, 255, 0.5) 50%);
+@media screen and (min-width: 800px) {
+  .product-card:nth-child(1), .product-card:nth-child(2) {
+    flex: 2 50%;
+  }
 }
-.product--pink {
-  background: linear-gradient(-45deg, #FF386D 50%, rgba(255, 255, 255, 0.5) 50%);
+@media screen and (min-width: 1080px) {
+  .product-card:nth-child(1), .product-card:nth-child(2) {
+    flex: 1 20%;
+  }
 }
-.product img, .product--blue img, .product--orange img, .product--red img, .product--green img, .product--yellow img, .product--pink img {
+.product-card img {
   max-width: 100%;
-  height: auto !important;
+  height: auto;
+}
+.product-card .product-info {
+  margin-top: auto;
   text-align: center;
-}
-.product_inner {
-  display: flex;
-  align-items: center;
-  flex-flow: column wrap;
-}
-.product_inner p {
-  color: rgba(255, 255, 255, 0.9);
-}
-.product_inner button {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #FFF;
-  border-radius: 3px;
-  padding: 1em 3em;
-  margin: 1em 0 0 0;
-  background: none;
-  cursor: pointer;
-  transition: background ease-in 0.25s;
-}
-.product_inner button:hover {
-  background: white;
-  color: #2B2D42;
-}
-.product_inner button:before {
-  font-family: FontAwesome;
-  /* content: ""; */
-  color: #FFF;
-  position: absolute;
-  font-size: 1.5em;
-  margin: 0 -1.5em;
-}
-.product_inner button:hover:before {
-  color: #2B2D42;
-}
-.product_overlay {
-  background: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(-500px);
-  opacity: 0;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-.product_overlay h2 {
-  color: rgba(43, 45, 66, 0.7);
-  font-size: 1.2em;
-  margin: 1em 0;
-}
-.product_overlay i {
-  color: rgba(43, 45, 66, 0.7);
-  font-size: 1.5em;
-}
+} */
 </style>
 
 

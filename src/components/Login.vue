@@ -1,54 +1,4 @@
 <template>
-<!-- <div class="container">
-  <div class="container">
-   <div class="section-title">
-        <h2>Log in</h2>
-        <p>welcome back</p>
-      </div>
-      <Form @submit.prevent="login"  id="contact" >
-        <div class="form-group">
-            <fieldset>
-          <label for="username">Username</label>
-          <input  type="text" class="form-control" v-model="username" />
-          <ErrorMessage name="username" class="error-feedback" />
-        </fieldset><br>
-        </div>
-          
-        <div class="form-group"> -->
-        <!-- <fieldset>
-            <label for="password">Password</label>
-            <input  class="form-control" v-model="password" />
-            <ErrorMessage name="password" class="error-feedback" />
-        </fieldset>
-       </div> -->
-        <!-- <div class="form-group"> -->
-            <!-- <button class="btn btn-primary btn-block" :disabled="loading">
-                <span v-show="loading" class="spinner-border spinner-border-sm"></span>
-                <span>Login</span>
-            </button>
-            <p class="logInText">Dont have an account?</p>
-            <router-link :to="{name:'Register'}">
-              <button class="btn btn-danger" :disabled="loading">
-              <span
-                v-show="loading"
-                class="spinner-border spinner-border-sm"
-              ></span>
-              Sign up
-           </button>
-            </router-link>
-           -->
-        <!-- </div> -->
-        <!-- <div class="form-group"> -->
-          <!-- <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
-          </div> -->
-
-        <!-- </div> -->
-      <!-- </Form> -->
-          <!-- </div>
-          </div>
-          </div>
-           --> 
       <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
@@ -83,8 +33,8 @@
 export default {
     data(){
     return {
-      username:"",
-      password:""
+      username:null,
+      password:null
 
     };
 
@@ -94,7 +44,7 @@ export default {
    login(){
       console.log(this.password);
       fetch('https://unathi-final-capstone-backend.herokuapp.com/user/login', {
-  method: 'PUT',
+  method: 'PATCH',
   body: JSON.stringify({
     username: this.username,
     password: this.email,
