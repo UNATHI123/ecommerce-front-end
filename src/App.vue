@@ -42,6 +42,7 @@
             <div class="row">
               <div class="col-md-6 text-center text-md-start fw-bold">
                 <p class="mb-2 mb-md-0 fw-bold">La Joyería © 2022</p>
+            
               </div>
               <div class="col-md-6 text-center text-md-end text-gray-400">
                 <p class="mb-0">Unathi Qolweni</p>
@@ -54,6 +55,11 @@
 </template>
 
 <style>
+
+.footer{
+    position:absolute ;
+
+}
 .nav-link{
 margin: 15px;
 

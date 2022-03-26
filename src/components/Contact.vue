@@ -1,64 +1,58 @@
 <template>
-    <div>
-
-        <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <div class="container"> 
+<h1 class="text-center"><span>Query ? Contact Us </span></h1>
+<section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
+  <div class="section-title">
+     <h2>Contact</h2>
+      </div>
+<div class="row mt-1">
 
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
+<div class="col-lg-4">
+  <div class="info">
+    <div class="address">
+      <i class="bi bi-geo-alt"></i>
+      <h4>Location:</h4>
+      <p>Western Cape,322 Chiappini St, Cape Town, 8001, South Africa.</p>
+    </div>
 
-        <div class="row mt-1">
+    <div class="email">
+      <i class="bi bi-envelope"></i>
+      <h4>Email:</h4>
+      <p>uqolweni@gmail.com</p>
+    </div>
 
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Western Cape,322 Chiappini St, Cape Town, 8001, South Africa.</p>
-              </div>
+  <div class="phone">
+    <i class="bi bi-phone"></i>
+    <h4>Call:</h4>
+    <p>+27 780 048 135</p>
+      </div>
+</div>
+</div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>uqolweni@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+27 780 048 135</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form @submit.prevent="handleSubmit" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="text">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" v-model="email">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="number" id="number" placeholder="Telephone" v-model="tel">
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" v-model="textarea"></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+<div class="col-lg-8 mt-5 mt-lg-0">
+<form @submit.prevent="handleSubmit" role="form" class="php-email-form">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="text">
+    </div>
+    <div class="col-md-6 form-group mt-3 mt-md-0">
+      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" v-model="email">
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <input type="text" class="form-control" name="number" id="number" placeholder="Telephone" v-model="tel">
+  </div>
+  <div class="form-group mt-3">
+    <textarea class="form-control" name="message" rows="5" placeholder="Message" v-model="textarea"></textarea>
+  </div>
+  <div class="my-3">
+    <div class="loading">Loading</div>
+    <div class="error-message"></div>
+    <div class="sent-message">Your message has been sent. Thank you!</div>
+  </div>
+  <div class="text-center"><button type="submit">Send Message</button></div>
+</form>
 
           </div>
 
@@ -68,6 +62,7 @@
     </section>
 
     </div>
+    
 </template>
 <script>
 
@@ -110,7 +105,9 @@ else {
 
 
 </script>
-<style >
+<style  scoped>
+
+
   .contact .info {
   width: 100%;
   background: #fff;
@@ -145,7 +142,7 @@ else {
   margin-top: 40px;
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #0563bb;
+  background: gold;
   color: #fff;
 }
 .contact .php-email-form {
@@ -204,7 +201,7 @@ else {
   padding: 10px 12px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #0563bb;
+  background: gold;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -212,7 +209,7 @@ else {
   border-radius: 50px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
+  background: crimson;
 }
 @-webkit-keyframes animate-loading {
   0% {

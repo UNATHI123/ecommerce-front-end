@@ -1,7 +1,7 @@
 <template >
     <div class="container">
   <div class="row" >
-  <div class="card col-sm-12 col-md-4 col-lg-3" v-for='product of products' :key="product.id">
+  <div class="card col-sm-12 col-md-4 col-lg-3" v-for='product of products' :key="product._id">
     <img :src="product.image" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{product.title}}</h5>
@@ -31,7 +31,7 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-outline-danger" v-on:click="Delete">DELETE</button>
+<button type="button" class="btn btn-outline-danger" @click="deleteProduct(product._id)">DELETE</button>
     </div>
   </div>
     </div>
@@ -70,14 +70,23 @@ export default {
 }, 
    
    methods: {
-       Delete(){
-           fetch('https://unathi-final-capstone-backend.herokuapp.com/products/:id', {
-  method: 'DELETE',
-});
+deleteProduct(_id){
+fetch('https://unathi-final-capstone-backend.herokuapp.com/products/' + _id, {
+method: 'DELETE',
+})
+.then((response)=>response.json())
+.then((data)=>{
+// console.log(data);
+alert("Product Deleted successfully");
+}).catch((err)=>{
+  alert(err)
+})
+
 
 },
-Update(){
-           fetch('https://unathi-final-capstone-backend.herokuapp.com/products/:id', {
+
+updateProduct(id){
+           fetch('https://unathi-final-capstone-backend.herokuapp.com/products/'+id, {
   method: 'PATCH',
   body: JSON.stringify({
     title: this.title,

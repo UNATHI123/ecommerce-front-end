@@ -1,4 +1,7 @@
 <template>
+<div class="container">
+	<h1 class="text-center"><span>ACCOUNT LOG IN</span></h1>
+
       <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
@@ -7,11 +10,11 @@
 			<div class="sign-in-htm">
 				<div class="group">
 					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<input id="user" type="text" class="input" v-model="username">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" type="password" class="input" data-type="password" v-model="password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
@@ -26,7 +29,7 @@
 		</div>
 	</div>
       </div>
-      
+</div>
           
 </template>
 <script>
@@ -71,35 +74,36 @@ localStorage.setItem("email", user.email);
 </script>
 
 <style scoped>
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 20px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: white;
-  margin: 4px 10px;
-}
-.section-title p {
-  margin: 0;
-  margin: -15px 0 15px 0;
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-}
 
+
+h1{
+  color: #484848;
+  font-size:30 px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  
+
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "";
+}
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: black;
+  text-shadow: 0 0 10px #fff,
+  0 0 20px gold, 
+  0 0 40px gold;
+}
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
