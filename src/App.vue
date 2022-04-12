@@ -20,24 +20,24 @@
         <li class="nav-item">
           <router-link to="/register" class="nav-link">Register</router-link> 
         </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
           <router-link to="/profile" class="nav-link">Profile</router-link> 
-        </li>
+        </li> -->
         <li class="nav-item">
           <router-link to="/contact" class="nav-link">Contact Us</router-link> 
         </li>
          <li class="nav-item">
           <router-link to="/cart" class="nav-link">Cart</router-link> 
         </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
           <router-link to="/admin" class="nav-link">Admin</router-link> 
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
 </nav>
 <router-view/>
-  <footer class="footer bg-secondary shadow align-self-end py-3 px-xl-5 w-100">
+  <footer class="footer bg-secondary shadow align-self-end py-3 px-xl-5 w-100" >
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 text-center text-md-start fw-bold">
@@ -61,16 +61,17 @@
 
 }
 .nav-link{
-margin: 15px;
+margin: 25px;
+padding: 20px;
+ }
 
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
-}
+} 
 
 
 </style>

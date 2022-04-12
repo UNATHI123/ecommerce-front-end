@@ -31,7 +31,7 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-outline-danger" @click="deleteProduct(product._id)">DELETE</button>
+<button type="button" class="btn btn-outline-danger" @click="deleteProduct(product.id)">DELETE</button>
     </div>
   </div>
     </div>
@@ -70,13 +70,13 @@ export default {
 }, 
    
    methods: {
-deleteProduct(_id){
-fetch('https://unathi-final-capstone-backend.herokuapp.com/products/' + _id, {
+deleteProduct(id){
+fetch('https://unathi-final-capstone-backend.herokuapp.com/products/' + id, {
 method: 'DELETE',
 })
 .then((response)=>response.json())
 .then((data)=>{
-// console.log(data);
+console.log(data);
 alert("Product Deleted successfully");
 }).catch((err)=>{
   alert(err)
@@ -86,7 +86,7 @@ alert("Product Deleted successfully");
 },
 
 updateProduct(id){
-           fetch('https://unathi-final-capstone-backend.herokuapp.com/products/'+id, {
+           fetch('https://unathi-final-capstone-backend.herokuapp.com/products/'+ id, {
   method: 'PATCH',
   body: JSON.stringify({
     title: this.title,

@@ -1,5 +1,9 @@
 <template>
 <div class="container">
+  <p class="h1 text-center">New User ,Register <br> Already have an account
+  <button type="button" class="btn btn-success"> <router-link to="/login">LOGIN</router-link></button>
+
+  </p>
  <form  @submit.prevent="signIn" id="contact">
     <h3> Contact Form</h3>
     <h4>Contact us for custom quote</h4>
@@ -13,7 +17,7 @@
     </fieldset>
     <fieldset>
 		<label for="password">Password</label>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" v-model="password">
+      <input placeholder="Your Password" type="tel" tabindex="3" v-model="password">
     </fieldset>
 
     <fieldset>
@@ -48,7 +52,11 @@ export default {
  .then((json)=>{  
           console.log(json); 
         alert("User registered");     
-localStorage.setItem("jwt",json.jwt);  
+localStorage.setItem("jwt",json.jwt);
+localStorage.setItem("id", user.id);
+localStorage.setItem("name", user.username);
+localStorage.setItem("email", user.email);
+    
        this.$router.push({name:"Login"});  
   }).catch((err)=>{  
     alert(err);  
@@ -175,5 +183,10 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+a {
+    color: WHITE;
+    text-decoration: none;
+    background-color: transparent;
 }
 </style>
